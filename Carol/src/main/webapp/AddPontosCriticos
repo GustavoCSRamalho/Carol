@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" type="text/css"  href="C:\Users\Carol\Desktop\SIte/estilos.css"/>  
+
+        
+    </head>
+    <body bgcolor="CCCCCC">
+    	 
+    	olaaaaa
+        <img id="imagem" src="C:\Users\Carol\Desktop\SIte\img\fundo.jpg"/>
+        <div class="texto">Pontos Criticos </div>
+    </body>
+</html>
