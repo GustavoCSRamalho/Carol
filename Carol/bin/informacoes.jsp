@@ -25,13 +25,13 @@
             Senha:
             <input class="formInput formTextInput" id=senha type="password" name="senha">
             Sexo:
-            <input type="radio" name="feminino" value="Feminino"> Feminino
-            <input type="radio" name="masculino" value="Masculino"> Masculino
+            <input type="radio" name="op" value="Feminino"> Feminino
+            <input type="radio" name="op" value="Masculino"> Masculino
             <br>
             
            	<button class="formInput submitButton" type="submit">Submit</button> <!-- //value="Cadastrar"> //onclick="showName(e)"    -->
-           	<button class="btn btn-default" type="reset"> Limpar</button>           
-           	<a href="javascript:void(0);" class="btn btn-confirm" onclick="showName()">Enviar</a>
+           	<button class="btn btn-default" type="reset"> Limpar</button><a href="login"><button class="btn btn-default">Voltar</button></a>           
+           	
         </form>
         
     </body>

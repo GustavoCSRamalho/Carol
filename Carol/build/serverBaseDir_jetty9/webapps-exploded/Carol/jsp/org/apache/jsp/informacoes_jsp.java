@@ -68,13 +68,13 @@ public final class informacoes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            Senha:\n");
       out.write("            <input class=\"formInput formTextInput\" id=senha type=\"password\" name=\"senha\">\n");
       out.write("            Sexo:\n");
-      out.write("            <input type=\"radio\" name=\"feminino\" value=\"Feminino\"> Feminino\n");
-      out.write("            <input type=\"radio\" name=\"masculino\" value=\"Masculino\"> Masculino\n");
+      out.write("            <input type=\"radio\" name=\"op\" value=\"Feminino\"> Feminino\n");
+      out.write("            <input type=\"radio\" name=\"op\" value=\"Masculino\"> Masculino\n");
       out.write("            <br>\n");
       out.write("            \n");
       out.write("           \t<button class=\"formInput submitButton\" type=\"submit\">Submit</button> <!-- //value=\"Cadastrar\"> //onclick=\"showName(e)\"    -->\n");
-      out.write("           \t<button class=\"btn btn-default\" type=\"reset\"> Limpar</button>           \n");
-      out.write("           \t<a href=\"javascript:void(0);\" class=\"btn btn-confirm\" onclick=\"showName()\">Enviar</a>\n");
+      out.write("           \t<button class=\"btn btn-default\" type=\"reset\"> Limpar</button><a href=\"login\"><button class=\"btn btn-default\">Voltar</button></a>           \n");
+      out.write("           \t\n");
       out.write("        </form>\n");
       out.write("        \n");
       out.write("    </body>\n");

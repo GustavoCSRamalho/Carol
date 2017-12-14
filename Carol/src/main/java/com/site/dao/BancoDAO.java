@@ -8,100 +8,86 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import org.hibernate.Session;
 
-import com.site.infra.CriadorDeSession;
 import com.site.infra.HibernateUtil;
 import com.site.modelos.Conteudo;
 import com.site.modelos.DadosUsuario;
 
-public  class BancoDAO {
+public class BancoDAO {
 	private static Session session;
+
 	public BancoDAO() {
-//		h =  new HibernateUtil();
+		// h = new HibernateUtil();
 		session = HibernateUtil.getSessionFactory().openSession();
-//		this.session = CriadorDeSession.getSession();
+		// this.session = CriadorDeSession.getSession();
 	}
-	
+
 	public void fechaConexao() {
 		session.close();
 	}
-	
+
 	public static void inserir(Object object) {
-		if(object instanceof DadosUsuario) {
+		if (object instanceof DadosUsuario) {
 			System.out.println("Inserindo no banco um DadosUsuario");
-			DadosUsuario du = (DadosUsuario)object;
+			DadosUsuario du = (DadosUsuario) object;
 			session.beginTransaction();
 			session.save(du);
 			session.getTransaction().commit();
-		}else {
-			Conteudo ct = (Conteudo)object;
+		} else {
+			Conteudo ct = (Conteudo) object;
 			session.beginTransaction();
 			session.save(ct);
 			session.getTransaction().commit();
 		}
-		
+
 	}
-	
-	
-	public  List<Object> findAll(String tipo) {
-		if(tipo.equals("DadosUsuario")) {
-			return  (session.createQuery("from com.site.modelos.DadosUsuario").list());
-		}else {
-			return  (session.createQuery("from com.site.modelos.Conteudo").list());
+
+	public List<Object> findAll(String tipo) {
+		if (tipo.equals("DadosUsuario")) {
+			return (session.createQuery("from com.site.modelos.DadosUsuario").list());
+		} else {
+			return (session.createQuery("from com.site.modelos.Conteudo").list());
 		}
 	}
-	
-	public  Object findOne(int id,String tipo) {
-		if(tipo.equals("DadosUsuario")) {
-			DadosUsuario du = (DadosUsuario)session.load(DadosUsuario.class, id);
+
+	public Object findOne(int id, String tipo) {
+		if (tipo.equals("DadosUsuario")) {
+			DadosUsuario du = (DadosUsuario) session.load(DadosUsuario.class, id);
 			return (Object) du;
-		}else {
-			Conteudo ct = (Conteudo)session.load(Conteudo.class, id);
-			
+		} else {
+			Conteudo ct = (Conteudo) session.load(Conteudo.class, id);
+
 			return (Object) ct;
 		}
-		
+
 	}
-	
+
 	public static boolean remove(int id, String tipo) {
 		boolean removeu = false;
 		session.beginTransaction();
-
-		if(tipo.equals("DadosUsuario")) {
-			DadosUsuario du = (DadosUsuario)session.load(DadosUsuario.class, id);
-	         session.delete(du);
+		
+		if (tipo.equals("DadosUsuario")) {
+			DadosUsuario du = (DadosUsuario) session.load(DadosUsuario.class, id);
+			session.delete(du);
 			removeu = true;
-		}else {
-			Conteudo ct = (Conteudo)session.load(Conteudo.class, id);
-	         session.delete(ct);
+		} else {
+			Conteudo ct = (Conteudo) session.load(Conteudo.class, id);
+			session.delete(ct);
 			removeu = true;
 		}
 		session.getTransaction().commit();
 		return removeu;
 	}
-	
-	public static void update (Object object) {
+
+	public static void update(Object object) {
 		boolean update = false;
 		session.beginTransaction();
-		if(object instanceof Conteudo) {
-			Conteudo ct = (Conteudo)object;
-			
+		if (object instanceof Conteudo) {
+			Conteudo ct = (Conteudo) object;
+
 			session.merge(ct);
 		}
 		session.getTransaction().commit();
-//		return update;
+		
 	}
-//	 session.beginTransaction();
-//	 session.save(t);
-//	 session.getTransaction().commit();
-	 
-//	 List<Teste> lista = session.createQuery("from com.site.modelos.Teste ").list();
-//	 List<Teste> lista = session.createQuery("select t from com.site.modelos.DadosUsuario as t where t.id = 19").list();
-    
-    
-    
-//    for(Teste teste: lista) {
-//   	 System.out.println("Conteudo: "+teste.getConteudo());
-//   	 t = teste;
-//    }
 
 }

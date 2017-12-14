@@ -14,9 +14,9 @@
 
     <form class="add" method="post" action="addponto">
             <label > Endereco:</label>
-            <input class="formInput formTextInput" placeholder="${id}" id=id  type="text" name="id"  value="${id}" >
+            <input class="formInput formTextInput" placeholder="${id}" id=id  type="hidden" name="id"  value="${id}" >
             
-            <input class="formInput formTextInput" placeholder="${user}" id=nome  type="text" name="nome"  value="${user}" >
+            <input class="formInput formTextInput" placeholder="${user}" id=nome  type="hidden" name="nome"  value="${user}" >
             <input class="formInput formTextInput" placeholder="Digite o Endereco " id=endereco type="text" name="endereco" value="${endereco}">
             <label> Tipo:</label>
             <input type="radio" name="op" value="Inchentes"> Inchentes

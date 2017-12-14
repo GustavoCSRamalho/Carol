@@ -1,21 +1,31 @@
-package com.site.paginas.cadastroinformacoes;
+package com.site.paginas.entrar;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import javax.servlet.http.HttpSession;
 
-@WebServlet(name = "InformacoesServlet", urlPatterns = {"informacoes"}, loadOnStartup = 1) 
-public class InformacoesServlet extends HttpServlet {
+import com.site.dao.BancoDAO;
+import com.site.modelos.Conteudo;
+import com.site.modelos.DadosUsuario;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+@WebServlet(name = "EntrarServlet", urlPatterns = {"/sd"}, loadOnStartup = 1) 
+public class EntrarServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
     	
-    	request.getRequestDispatcher("informacoes.jsp").forward(request, response);
+    	request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
+    	
+        
     }
 }

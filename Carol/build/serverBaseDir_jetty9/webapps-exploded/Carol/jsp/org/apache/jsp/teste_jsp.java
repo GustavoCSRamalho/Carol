@@ -59,13 +59,13 @@ public final class teste_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <label > Endereco:</label>\r\n");
       out.write("            <input class=\"formInput formTextInput\" placeholder=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" id=id  type=\"text\" name=\"id\"  value=\"");
+      out.write("\" id=id  type=\"hidden\" name=\"id\"  value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" >\r\n");
       out.write("            \r\n");
       out.write("            <input class=\"formInput formTextInput\" placeholder=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" id=nome  type=\"text\" name=\"nome\"  value=\"");
+      out.write("\" id=nome  type=\"hidden\" name=\"nome\"  value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" >\r\n");
       out.write("            <input class=\"formInput formTextInput\" placeholder=\"Digite o Endereco \" id=endereco type=\"text\" name=\"endereco\" value=\"");

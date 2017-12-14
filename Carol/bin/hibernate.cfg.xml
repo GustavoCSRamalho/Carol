@@ -14,6 +14,5 @@
     <property name="hibernate.hbm2ddl.auto">update</property>
      <mapping class="com.site.modelos.Conteudo"/>
      <mapping class="com.site.modelos.DadosUsuario"/>
-     <mapping class="com.site.modelos.Teste"/>          
    </session-factory>
 </hibernate-configuration>
