@@ -29,10 +29,9 @@ public class CadastroServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-//    	BancoDAO bd = new BancoDAO();
-
+    	
     	DadosUsuario du = null; 
-    	try {
+    	
     	System.out.println("Aqui");
     	du = new DadosUsuario();
     	String conteudo = request.getParameter("nome");
@@ -47,25 +46,14 @@ public class CadastroServlet extends HttpServlet {
     	du.setUsuario(conteudo);
     	conteudo = request.getParameter("senha");
     	du.setSenha(conteudo);
-    	}catch(Exception e) {
-    		request.getRequestDispatcher("ponte.jsp").forward(request, response);
-    	}
-try {
     	
-		dao = new BancoDAO();
-//    		t = new Inter();
-//    		new BancoDAO().inserir(du);
-    		
-    	}catch(Exception e) {
-    		System.out.println("Falha");
-    		request.getRequestDispatcher("ok.jsp").forward(request, response);
-    	}
-//    		t.insere(du);
-//    	bd.fechaConexao();
+    	dao = new BancoDAO();
+
+    	
+		
+    	dao.inserir(du);
+    	
     	request.getRequestDispatcher("login.jsp").forward(request, response);
-//        String name = request.getParameter("name");
-//        if (name == null) name = "World";
-//        request.setAttribute("user", name);
-//        request.getRequestDispatcher("teste/response.jsp").forward(request, response); 
+      
     }
 }

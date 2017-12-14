@@ -59,10 +59,12 @@ public class teste {
 		 BancoDAO bd = new BancoDAO();
 		 Conteudo c = new Conteudo();
 		 DadosUsuario d = new DadosUsuario();
-				 d.setEmail("aadsdsddaa");
-		 c.setAssunto("assunto");
-		 c.setDetalhes("detlahes");
-		 c.setEndereco("234");
+		 		d.setNome("roberto1234");
+				 d.setEmail("carolina@@@");
+				 d.setSexo("Feminino");
+//		 c.setAssunto("assunto");
+//		 c.setDetalhes("detlahes");
+//		 c.setEndereco("234");
 		 bd.inserir(d);
 		 bd.fechaConexao();
 		 

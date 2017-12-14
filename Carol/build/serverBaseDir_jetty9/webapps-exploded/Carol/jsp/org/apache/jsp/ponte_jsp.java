@@ -30,7 +30,7 @@ public final class ponte_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html;charset=UTF-8");
+      response.setContentType("text/html");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -51,12 +51,12 @@ public final class ponte_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta name=\"description\" content=\"indicando os pontos criticos da cidade de sao jose dos campos\"/>\n");
       out.write("        <meta name\"keywords\" content=\"problemas,ruas,acidentes,inchentes,congestionamento\" />\n");
       out.write("        <meta name=\"author\" content=\"Caroline Teixeira\" />\n");
-      out.write("        <link rel=\"stylesheet\" type=\"text/css\"  href=\"C:\\Users\\Carol\\Desktop\\SIte\\estilo.css\"/>\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\"  href=\"css/estilo.css\"/>\n");
       out.write("        \n");
       out.write("        \n");
       out.write("    </head>\n");
       out.write("    <body> \n");
-      out.write("                <img id=\"imagem\" src=\"C:\\Users\\Carol\\Desktop\\SIte\\img\\fundo.jpg\"/>\n");
+      out.write("                <img id=\"imagem\" src=\"imagem/fundo.jpg\"/>\n");
       out.write("                <div class=\"texto\">Pontos Criticos - Filtre ou Adicione </div>\n");
       out.write("       <form class=\"baseForm\" method=\"post\" action=\"\">\n");
       out.write("            Filtre pelo nome da rua:\n");
@@ -66,7 +66,7 @@ public final class ponte_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("            Adicione um Novo Ponto Crítico:\n");
-      out.write("            <a  href=\"teste.html\" id=\"cadastro\">Adicionar</a> \n");
+      out.write("            <a  href=\"addponto\" id=\"cadastro\">Adicionar</a> \n");
       out.write("\n");
       out.write("            \n");
       out.write("\n");

@@ -51,7 +51,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta name=\"description\" content=\"indicando os pontos criticos da cidade de sao jose dos campos\"/>\n");
       out.write("        <meta name\"keywords\" content=\"problemas,ruas,acidentes,inchentes,congestionamento\" />\n");
       out.write("        <meta name=\"author\" content=\"Caroline Teixeira\" />\n");
-      out.write("        <link rel=\"stylesheet\" type=\"text/css\"  href=\"C:\\Users\\Carol\\Desktop\\SIte\\estilo.css\"/>\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\"  href=\"css/estilo.css\"/>\n");
       out.write("        <script src=\"http://code.jquery.com/jquery-latest.min.js\"></script>\n");
       out.write("   <script>\n");
       out.write("     $(document).ready(function() {\n");
@@ -82,7 +82,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        \n");
       out.write("    </head>\n");
       out.write("    <body> \n");
-      out.write("                <img id=\"imagem\" src=\"C:\\Users\\Carol\\Desktop\\SIte\\img\\fundo.jpg\"/>\n");
+      out.write("                <img id=\"imagem\" src=\"imagem/fundo.jpg\"/>\n");
       out.write("                <div class=\"texto\">Pontos Criticos </div>\n");
       out.write("\n");
       out.write("    \n");

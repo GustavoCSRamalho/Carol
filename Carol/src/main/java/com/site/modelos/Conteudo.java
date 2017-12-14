@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+//chaar de pontos criticos
 @Entity
 @Table(name="Conteudo")
 public class Conteudo {

@@ -8,7 +8,7 @@
         <meta name="description" content="indicando os pontos criticos da cidade de sao jose dos campos"/>
         <meta name"keywords" content="problemas,ruas,acidentes,inchentes,congestionamento" />
         <meta name="author" content="Caroline Teixeira" />
-        <link rel="stylesheet" type="text/css"  href="C:\Users\Carol\Desktop\SIte\estilo.css"/>
+        <link rel="stylesheet" type="text/css"  href="css/estilo.css"/>
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
    <script>
      $(document).ready(function() {
@@ -39,7 +39,7 @@
         
     </head>
     <body> 
-                <img id="imagem" src="C:\Users\Carol\Desktop\SIte\img\fundo.jpg"/>
+                <img id="imagem" src="imagem/fundo.jpg"/>
                 <div class="texto">Pontos Criticos </div>
 
     

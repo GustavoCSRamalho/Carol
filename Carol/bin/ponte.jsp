@@ -1,4 +1,4 @@
-﻿   
+   
 
 <html>
     <head>
@@ -8,12 +8,12 @@
         <meta name="description" content="indicando os pontos criticos da cidade de sao jose dos campos"/>
         <meta name"keywords" content="problemas,ruas,acidentes,inchentes,congestionamento" />
         <meta name="author" content="Caroline Teixeira" />
-        <link rel="stylesheet" type="text/css"  href="C:\Users\Carol\Desktop\SIte\estilo.css"/>
+        <link rel="stylesheet" type="text/css"  href="css/estilo.css"/>
         
         
     </head>
     <body> 
-                <img id="imagem" src="C:\Users\Carol\Desktop\SIte\img\fundo.jpg"/>
+                <img id="imagem" src="imagem/fundo.jpg"/>
                 <div class="texto">Pontos Criticos - Filtre ou Adicione </div>
        <form class="baseForm" method="post" action="">
             Filtre pelo nome da rua:
@@ -22,8 +22,8 @@
 
 
 
-            Adicione um Novo Ponto Crítico:
-            <a  href="teste.html" id="cadastro">Adicionar</a> 
+            Adicione um Novo Ponto Cr�tico:
+            <a  href="addponto" id="cadastro">Adicionar</a> 
 
             
 
