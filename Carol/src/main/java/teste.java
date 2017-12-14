@@ -57,16 +57,36 @@ public class teste {
 //		 session.getTransaction().commit();
 //		 session.close();
 		 BancoDAO bd = new BancoDAO();
+		 
+		 List<Object> lista = bd.findAll("Conteudo");
+		 for(Object ob : lista) {
+//			 DadosUsuario du = (DadosUsuario)ob;
+			 Conteudo c = (Conteudo) ob;
+			 System.out.println("Conteudo senha "+c.getId());
+		 }
+//		 if(lista.size() == 0) {
+//			 System.out.println("Sem nada!");
+//		 }
 		 Conteudo c = new Conteudo();
-		 DadosUsuario d = new DadosUsuario();
-		 		d.setNome("roberto1234");
-				 d.setEmail("carolina@@@");
-				 d.setSexo("Feminino");
-//		 c.setAssunto("assunto");
-//		 c.setDetalhes("detlahes");
-//		 c.setEndereco("234");
-		 bd.inserir(d);
-		 bd.fechaConexao();
+//		 DadosUsuario d = new DadosUsuario();
+//		 		d.setNome("roberto1234");
+//				 d.setEmail("carolina@@@");
+//				 d.setSexo("Feminino");
+		 c.setTipo("assunto");
+////		 c.setDetalhes("detlahes");
+		 c.setEndereco("234");
+		 c.setMensagem("Mensagem");
+		 bd.inserir(c);
+//		 Conteudo cu;
+//		 try {
+//			 cu = (Conteudo)bd.findOne(3, "Conteudo");
+//		 }catch(Exception e) {
+//			 cu = null;
+//		 }
+//		 
+//		 System.out.println(cu);
+//		 System.out.println(cu.getDetalhes());
+//		 bd.fechaConexao();
 		 
 		 
 	  }

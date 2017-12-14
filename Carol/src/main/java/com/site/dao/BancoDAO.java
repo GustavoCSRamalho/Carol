@@ -1,5 +1,6 @@
 package com.site.dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -41,19 +42,21 @@ public  class BancoDAO {
 	}
 	
 	
-	public static List<Object> findAll(Object object) {
-		if(object instanceof DadosUsuario) {
-			return  ((List<Object>)session.createQuery("from com.site.modelos.DadosUsuario").list());
+	public  List<Object> findAll(String tipo) {
+		if(tipo.equals("DadosUsuario")) {
+			return  (session.createQuery("from com.site.modelos.DadosUsuario").list());
 		}else {
-			return  ((List<Object>)session.createQuery("from com.site.modelos.Conteudo").list());
+			return  (session.createQuery("from com.site.modelos.Conteudo").list());
 		}
 	}
-	public static Object findOne(int id,String tipo) {
+	
+	public  Object findOne(int id,String tipo) {
 		if(tipo.equals("DadosUsuario")) {
 			DadosUsuario du = (DadosUsuario)session.load(DadosUsuario.class, id);
 			return (Object) du;
 		}else {
 			Conteudo ct = (Conteudo)session.load(Conteudo.class, id);
+			
 			return (Object) ct;
 		}
 		
@@ -61,6 +64,8 @@ public  class BancoDAO {
 	
 	public static boolean remove(int id, String tipo) {
 		boolean removeu = false;
+		session.beginTransaction();
+
 		if(tipo.equals("DadosUsuario")) {
 			DadosUsuario du = (DadosUsuario)session.load(DadosUsuario.class, id);
 	         session.delete(du);
@@ -74,17 +79,16 @@ public  class BancoDAO {
 		return removeu;
 	}
 	
-	public static boolean update (Object object) {
+	public static void update (Object object) {
 		boolean update = false;
 		session.beginTransaction();
 		if(object instanceof Conteudo) {
 			Conteudo ct = (Conteudo)object;
 			
 			session.merge(ct);
-			update = true;
 		}
 		session.getTransaction().commit();
-		return update;
+//		return update;
 	}
 //	 session.beginTransaction();
 //	 session.save(t);

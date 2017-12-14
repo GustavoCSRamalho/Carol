@@ -12,26 +12,28 @@
         
         
     </head>
-    <body> 
+    <body>
+    <h1>Bem-Vindo ${user}</h1> 
                 <img id="imagem" src="imagem/fundo.jpg"/>
                 <div class="texto">Pontos Criticos - Filtre ou Adicione </div>
        <form class="baseForm" method="post" action="">
+            
             Filtre pelo nome da rua:
             <input class="formInput formTextInput" id=rua type="text" name="rua"> 
             <input class="formInput submit" type="submit" value="Filtrar" >
+			<a href="addponto?user=${user}" >Adicionar</a> 
+			<a href="atualizar?user=${user}">Atualizar</a>
+			<a href="deletar?user=${user}">Deletar</a>
 
 
-
-            Adicione um Novo Ponto Crítico:
-            <a  href="addponto" id="cadastro">Adicionar</a> 
-
+            
+			
             
 
 
             
         </form>
-
-    
+	    
         
             
     </body>

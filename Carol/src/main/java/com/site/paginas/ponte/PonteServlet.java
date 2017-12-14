@@ -1,4 +1,4 @@
-package com.site.paginas.login;
+package com.site.paginas.ponte;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,12 +13,14 @@ import com.site.modelos.DadosUsuario;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "LoginServlet", urlPatterns = {"login"}, loadOnStartup = 1) 
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "PonteServlet", urlPatterns = {"ponte"}, loadOnStartup = 1) 
+public class PonteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 //    	doPost(request, response);
-    	request.getRequestDispatcher("login.jsp").forward(request, response);
+    	String user = request.getParameter("user");
+    	request.setAttribute("user", user);
+    	request.getRequestDispatcher("ponte.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

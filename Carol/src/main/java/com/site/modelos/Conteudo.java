@@ -13,23 +13,31 @@ public class Conteudo {
 	@Column(name="id")
 	@GeneratedValue
 	private int id;
-	@Column(name="assunto")
-	private String assunto;
+	@Column(name="nome")
+	private String nome;
+	@Column(name="tipo")
+	private String tipo;
 	@Column(name="endereco")
 	private String endereco;
-	@Column(name="detalhes")
-	private String detalhes;
+	@Column(name="mensagem")
+	private String mensagem;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getAssunto() {
-		return assunto;
+	public String getNome() {
+		return nome;
 	}
-	public void setAssunto(String assunto) {
-		this.assunto = assunto;
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 	public String getEndereco() {
 		return endereco;
@@ -37,12 +45,13 @@ public class Conteudo {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public String getDetalhes() {
-		return detalhes;
+	public String getMensagem() {
+		return mensagem;
 	}
-	public void setDetalhes(String detalhes) {
-		this.detalhes = detalhes;
+	public void setMensagem(String mensagem) {
+		this.mensagem = mensagem;
 	}
+	
 	
 	
 }

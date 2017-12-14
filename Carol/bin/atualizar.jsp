@@ -9,13 +9,15 @@
 </head>
 <body>
 <table>
+<h1>ola ${user}</h1>
   <!-- percorre contatos montando as linhas da tabela -->
   <c:forEach var="contato" items="${lista}">
     <tr>
-      <td>${contato}</td>
-      <td><button>Deletar</button></td>
+      <td>${contato.mensagem}</td>
+      <td><a href="addponto?user=${user}&id=${contato.id}">Atualizar</a></td>
     </tr>
   </c:forEach>
 </table>
+<a href="ponte">Voltar</a>
 </body>
 </html>
